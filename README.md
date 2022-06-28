@@ -1,5 +1,7 @@
 # dmcgym
 
+A fork of [dmc2gym](https://github.com/denisyarats/dmc2gym) refactored to remove parts implemented in other gym wrappers and add support for interactive rendering.
+
 ## Installation
 
 ```bash
