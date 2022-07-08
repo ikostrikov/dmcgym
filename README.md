@@ -5,7 +5,7 @@ A fork of [dmc2gym](https://github.com/denisyarats/dmc2gym) refactored to remove
 ## Installation
 
 ```bash
-pip install git+git://github.com/ikostrikov/dmcgym.git
+pip install git+https://github.com/ikostrikov/dmcgym.git
 ```
 
 ## Usage
