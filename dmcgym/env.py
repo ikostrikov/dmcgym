@@ -18,8 +18,10 @@ def dmc_spec2gym_space(spec):
             spec[k] = dmc_spec2gym_space(v)
         return spaces.Dict(spec)
     elif isinstance(spec, dm_env.specs.BoundedArray):
-        return spaces.Box(low=spec.minimum,
-                          high=spec.maximum,
+        low = np.broadcast_to(spec.minimum, spec.shape)
+        high = np.broadcast_to(spec.maximum, spec.shape)
+        return spaces.Box(low=low,
+                          high=high,
                           shape=spec.shape,
                           dtype=spec.dtype)
     elif isinstance(spec, dm_env.specs.Array):
